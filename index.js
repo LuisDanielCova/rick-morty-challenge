@@ -1,12 +1,9 @@
 import express from "express";
-import { getEpisodes } from "./src/challenges/getEpisodes.js";
+import { getResults } from "./src/getResults.js";
 
 const app = express();
 
-app.use("/", async (req, res, next) => {
-  const results = await getEpisodes();
-  return res.json(results);
-});
+app.use("/", getResults);
 
 app.listen(3001, () => {
   console.log(`Servidor corriendo en el puerto 3001`);
