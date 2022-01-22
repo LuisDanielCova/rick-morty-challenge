@@ -1,11 +1,11 @@
 import express from "express";
-import { getCharacters } from "./src/challenges/getCharacters.js";
+import { getEpisodes } from "./src/challenges/getEpisodes.js";
 
 const app = express();
 
 app.use("/", async (req, res, next) => {
-  const characterResult = await getCharacters();
-  res.json(characterResult);
+  const results = await getEpisodes();
+  return res.json(results);
 });
 
 app.listen(3001, () => {
