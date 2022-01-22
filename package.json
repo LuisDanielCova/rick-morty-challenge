@@ -1,0 +1,28 @@
+{
+  "name": "rick-morty-challenge",
+  "version": "1.0.0",
+  "description": "rick and morty challenge for an interview",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisDanielCova/rick-morty-challenge.git"
+  },
+  "author": "Luis Daniel Cova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisDanielCova/rick-morty-challenge/issues"
+  },
+  "homepage": "https://github.com/LuisDanielCova/rick-morty-challenge#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "node-fetch": "^3.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
