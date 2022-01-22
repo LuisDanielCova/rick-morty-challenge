@@ -1,11 +1,11 @@
 import express from "express";
-import { fetchApi } from "./src/utils/fetchApi.js";
+import { getRouteNumber } from "./src/utils/getRouteCharCount.js";
 
 const app = express();
 
 app.use("/", async (req, res, next) => {
-  const response = await fetchApi("episode");
-  res.json(response);
+  const count = await getRouteNumber("character");
+  res.json(count);
 });
 
 app.listen(3001, () => {
