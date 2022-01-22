@@ -1,9 +1,11 @@
 import express from "express";
+import { fetchApi } from "./src/utils/fetchApi.js";
 
 const app = express();
 
-app.use("/", (req, res, next) => {
-  res.json({ Message: "Hello from index.js" });
+app.use("/", async (req, res, next) => {
+  const response = await fetchApi("episode");
+  res.json(response);
 });
 
 app.listen(3001, () => {
