@@ -1,11 +1,11 @@
 import express from "express";
-import { getRouteNumber } from "./src/utils/getRouteCharCount.js";
+import { getCharacters } from "./src/challenges/getCharacters.js";
 
 const app = express();
 
 app.use("/", async (req, res, next) => {
-  const count = await getRouteNumber("character");
-  res.json(count);
+  const characterResult = await getCharacters();
+  res.json(characterResult);
 });
 
 app.listen(3001, () => {

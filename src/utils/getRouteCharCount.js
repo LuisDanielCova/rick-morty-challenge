@@ -1,6 +1,6 @@
 import { fetchApi } from "./fetchApi.js";
 
-export const getRouteNumber = async (route) => {
+export const getRouteCharCount = async (route) => {
   const results = await fetchApi(route);
 
   const names = results.map((value) => {
